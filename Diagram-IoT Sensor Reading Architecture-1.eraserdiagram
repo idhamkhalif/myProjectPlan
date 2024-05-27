@@ -1,0 +1,24 @@
+cloud-architecture-diagram
+
+// IoT Architecture Diagram for Reading MPU 6050 Sensor with ESP32, Custom Server, and Mobile App
+
+title IoT Sensor Reading Architecture
+
+IoT Device [icon: microchip, color: blue] {
+  MPU 6050 Sensor [icon: thermometer]
+  ESP32 Microcontroller [icon: microchip]
+}
+
+Server [icon: server, color: green] {
+  API Server [icon: nodejs] // entry point
+  Database [icon: aws-rds]
+}
+
+Mobile App [icon: mobile, color: purple]
+
+// Connections
+MPU 6050 Sensor > ESP32 Microcontroller
+ESP32 Microcontroller > API Server
+API Server > Database
+Mobile App > API Server
+
