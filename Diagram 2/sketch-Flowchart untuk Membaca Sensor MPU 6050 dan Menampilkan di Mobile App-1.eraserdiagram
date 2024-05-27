@@ -1,0 +1,18 @@
+flowchart-diagram
+
+title Flowchart untuk Membaca Sensor MPU 6050 dan Menampilkan di Mobile App
+
+// Define nodes and relationships "A > B"
+// Set shape and icon properties in "[]"
+// Add labels to relationships after ":"
+Mulai [shape: oval, icon: play-circle] > Inisialisasi Sensor [icon: settings]
+Inisialisasi Sensor > Baca Data Sensor [icon: activity]
+Baca Data Sensor > Data Valid? [shape: diamond, icon: check-square]
+
+Data Valid? > Kirim Data ke Server [icon: send]: Ya
+Data Valid? > Baca Ulang Data [icon: repeat]: Tidak
+Kirim Data ke Server > Data Terkirim? [shape: diamond, icon: check-square]
+
+Data Terkirim? > Tampilkan di Mobile App [icon: smartphone]: Ya
+Data Terkirim? > Kirim Ulang Data [icon: repeat]: Tidak
+
